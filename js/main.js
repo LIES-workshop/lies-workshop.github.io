@@ -16,26 +16,14 @@ async function loadEditions() {
   const tbody = document.getElementById('editions-tbody');
   try {
     const { editions } = await fetchJSON('data/editions.json');
-    tbody.innerHTML = editions.map(e => `
-      <tr${e.url ? ` data-url="${e.url}" title="Go to ${e.year} edition" tabindex="0"` : ''}>
-        <td>${e.year}</td>
-        <td>${e.conference}</td>
-        <td>${e.location}</td>
-      </tr>`).join('');
-    tbody.querySelectorAll('tr[data-url]').forEach(row => {
-      row.addEventListener('click', e => {
-        if (e.target.closest('a')) return;
-        window.open(row.dataset.url, '_blank', 'noopener,noreferrer');
-      });
-      row.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          window.open(row.dataset.url, '_blank', 'noopener,noreferrer');
-        }
-      });
-    });
+    tbody.innerHTML = editions.map(e => {
+      const cells = `<span role="cell">${e.year}</span><span role="cell">${e.conference}</span><span role="cell">${e.location}</span>`;
+      return e.url
+        ? `<a href="${e.url}" class="editions-row" role="row" ${EXT_LINK} title="Go to ${e.year} edition">${cells}</a>`
+        : `<div class="editions-row" role="row">${cells}</div>`;
+    }).join('');
   } catch {
-    tbody.innerHTML = '<tr><td colspan="3" class="data-error">Could not load editions.</td></tr>';
+    tbody.innerHTML = '<div class="editions-row data-error" role="row"><span role="cell">Could not load editions.</span></div>';
   }
 }
 

@@ -1,9 +1,10 @@
 :root {
-  --font-serif:   'DM Serif Display', Georgia, serif;
-  --color-accent: #1c3f5e;
-  --color-border: #e8e8e6;
-  --color-bg:     #fafaf9;
-  --color-muted:  #777;
+  --font-serif:    'DM Serif Display', Georgia, serif;
+  --color-accent:  #1c3f5e;
+  --color-gold:    #C97D10;
+  --color-border:  #e8e8e6;
+  --color-bg:      #fafaf9;
+  --color-muted:   #777;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -107,14 +108,17 @@ h2 {
 }
 
 /* EDITIONS TABLE */
-table {
+.editions-table {
   width: 100%;
-  border-collapse: collapse;
   font-size: 0.9rem;
 }
 
-thead th {
-  text-align: left;
+.editions-row {
+  display: grid;
+  grid-template-columns: 5rem 1fr 1fr;
+}
+
+.editions-header span {
   padding: 0.6rem 1rem;
   font-weight: 600;
   font-size: 0.85rem;
@@ -122,22 +126,23 @@ thead th {
   border-bottom: 2px solid var(--color-border);
 }
 
-thead th:first-child,
-tbody td:first-child { padding-left: 0; }
+.editions-row span:first-child { padding-left: 0; }
 
-tbody tr[data-url] { position: relative; cursor: pointer; }
-
-tbody tr { transition: background 0.12s; }
-
-tbody tr:hover { background: #f0efed; }
-
-tbody td {
+.editions-row:not(.editions-header) span {
   padding: 0.7rem 1rem;
   border-bottom: 1px solid var(--color-border);
   color: #333;
 }
 
-tbody tr:last-child td { border-bottom: none; }
+.data-error span { grid-column: 1 / -1; }
+
+a.editions-row {
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.12s;
+}
+
+a.editions-row:hover { background: #fdf5e6; }
 
 /* ORGANIZERS */
 .org-list {
@@ -164,7 +169,7 @@ tbody tr:last-child td { border-bottom: none; }
 }
 
 .org-name {
-  color: var(--color-accent);
+  color: var(--color-gold);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -193,7 +198,7 @@ tbody tr:last-child td { border-bottom: none; }
   font-size: 1.05rem;
 }
 
-.org-icon:hover { color: #111; }
+.org-icon:hover { color: var(--color-gold); }
 
 /* SHARED */
 .data-error { color: #aaa; font-size: 0.9rem; }

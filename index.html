@@ -43,16 +43,16 @@
 
     <section id="editions">
       <h2>Editions</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Conference</th>
-            <th>Location</th>
-          </tr>
-        </thead>
-        <tbody id="editions-tbody"></tbody>
-      </table>
+      <div class="editions-table" role="table" aria-label="Workshop editions">
+        <div class="editions-thead" role="rowgroup">
+          <div class="editions-row editions-header" role="row">
+            <span role="columnheader">Year</span>
+            <span role="columnheader">Conference</span>
+            <span role="columnheader">Location</span>
+          </div>
+        </div>
+        <div class="editions-tbody" role="rowgroup" id="editions-tbody"></div>
+      </div>
     </section>
 
     <section id="organizers">
