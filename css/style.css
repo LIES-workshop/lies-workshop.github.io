@@ -49,7 +49,7 @@ nav {
 
 /* LAYOUT */
 .page-col {
-  max-width: 680px;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem;
