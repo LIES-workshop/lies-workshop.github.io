@@ -22,6 +22,12 @@ async function loadEditions() {
         <td>${e.conference}</td>
         <td>${e.location}</td>
       </tr>`).join('');
+    tbody.querySelectorAll('tr[data-url]').forEach(row => {
+      row.addEventListener('click', e => {
+        if (e.target.closest('a')) return;
+        window.open(row.dataset.url, '_blank', 'noopener,noreferrer');
+      });
+    });
   } catch {
     tbody.innerHTML = '<tr><td colspan="3" class="data-error">Could not load editions.</td></tr>';
   }
