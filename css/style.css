@@ -127,11 +127,6 @@ tbody td:first-child { padding-left: 0; }
 
 tbody tr[data-url] { position: relative; cursor: pointer; }
 
-a.row-link {
-  position: absolute;
-  inset: 0;
-}
-
 tbody tr { transition: background 0.12s; }
 
 tbody tr:hover { background: #f0efed; }
