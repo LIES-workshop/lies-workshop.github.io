@@ -14,15 +14,11 @@ async function fetchJSON(url) {
 
 async function loadEditions() {
   const tbody = document.getElementById('editions-tbody');
-  tbody.addEventListener('click', e => {
-    const row = e.target.closest('tr[data-url]');
-    if (row) window.open(row.dataset.url, '_blank', 'noopener,noreferrer');
-  });
   try {
     const { editions } = await fetchJSON('data/editions.json');
     tbody.innerHTML = editions.map(e => `
       <tr${e.url ? ` data-url="${e.url}" title="Go to ${e.year} edition"` : ''}>
-        <td>${e.year}</td>
+        <td>${e.url ? `<a href="${e.url}" class="row-link" ${EXT_LINK} aria-label="Go to ${e.year} edition"></a>` : ''}${e.year}</td>
         <td>${e.conference}</td>
         <td>${e.location}</td>
       </tr>`).join('');
