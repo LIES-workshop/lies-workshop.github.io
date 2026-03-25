@@ -17,8 +17,8 @@ async function loadEditions() {
   try {
     const { editions } = await fetchJSON('data/editions.json');
     tbody.innerHTML = editions.map(e => `
-      <tr${e.url ? ` data-url="${e.url}" title="Go to ${e.year} edition"` : ''}>
-        <td>${e.url ? `<a href="${e.url}" class="row-link" ${EXT_LINK} aria-label="Go to ${e.year} edition"></a>` : ''}${e.year}</td>
+      <tr${e.url ? ` data-url="${e.url}" title="Go to ${e.year} edition" tabindex="0"` : ''}>
+        <td>${e.year}</td>
         <td>${e.conference}</td>
         <td>${e.location}</td>
       </tr>`).join('');
@@ -26,6 +26,12 @@ async function loadEditions() {
       row.addEventListener('click', e => {
         if (e.target.closest('a')) return;
         window.open(row.dataset.url, '_blank', 'noopener,noreferrer');
+      });
+      row.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.open(row.dataset.url, '_blank', 'noopener,noreferrer');
+        }
       });
     });
   } catch {
