@@ -19,6 +19,26 @@
         { "label": "Bluesky", "url": "https://bsky.app/profile/rer.bsky.social" },
         { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=tyTlG34AAAAJ&hl=en" }
       ]
+    },
+    {
+      "name": "Kai-Cheng Yang",
+      "affiliation": "Binghamton University",
+      "website": "https://www.kaichengyang.me/",
+      "links": [
+        { "label": "X", "url": "https://twitter.com/yang3kc" },
+        { "label": "Bluesky", "url": "https://bsky.app/profile/yang3kc.bsky.social" },
+        { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=tqb96X8AAAAJ" }
+      ]
+    },
+    {
+      "name": "Francesco Pierri",
+      "affiliation": "Politecnico di Milano",
+      "website": "https://frapierri.github.io/",
+      "links": [
+        { "label": "X", "url": "https://twitter.com/frapi9" },
+        { "label": "Bluesky", "url": "https://bsky.app/profile/frapierri.bsky.social" },
+        { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=b17WlbMAAAAJ" }
+      ]
     }
   ]
 }
