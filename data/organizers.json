@@ -1,0 +1,24 @@
+{
+  "organizers": [
+    {
+      "name": "Matthew R. DeVerna",
+      "affiliation": "Stanford Tech Impact and Policy Center",
+      "website": "https://www.matthewdeverna.com/",
+      "links": [
+        { "label": "X", "url": "https://twitter.com/mdeverna2" },
+        { "label": "Bluesky", "url": "https://bsky.app/profile/matthewdeverna.com" },
+        { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=bhEp-joAAAAJ" }
+      ]
+    },
+    {
+      "name": "Ronald E. Robertson",
+      "affiliation": "Stanford Tech Impact and Policy Center",
+      "website": "https://ronalderobertson.com/",
+      "links": [
+        { "label": "X", "url": "https://twitter.com/RERobertson" },
+        { "label": "Bluesky", "url": "https://bsky.app/profile/rer.bsky.social" },
+        { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=tyTlG34AAAAJ&hl=en" }
+      ]
+    }
+  ]
+}
