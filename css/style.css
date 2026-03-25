@@ -47,7 +47,7 @@ nav {
   font-size: 0.875rem;
 }
 
-.nav-links a:hover { color: #111; }
+.nav-links a:hover { color: var(--color-gold); }
 
 /* LAYOUT */
 .page-col {
@@ -160,6 +160,12 @@ a.editions-row:hover { background: #fdf5e6; }
   border: 1px solid var(--color-border);
   border-radius: 6px;
   background: #fff;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.org-item:hover {
+  border-color: var(--color-gold);
+  background: #fdf5e6;
 }
 
 .org-info {
