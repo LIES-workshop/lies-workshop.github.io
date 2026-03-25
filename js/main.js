@@ -39,16 +39,15 @@ async function loadOrganizers() {
       const nameHtml = org.website
         ? `<a href="${org.website}" class="org-name" ${EXT_LINK}>${org.name}</a>`
         : `<span class="org-name">${org.name}</span>`;
-      const iconsHtml = org.links.reduce((html, l) => {
-        const icon = ICONS[l.label];
-        return icon && l.url
-          ? html + `<a href="${l.url}" class="org-icon" ${EXT_LINK} title="${l.label}">${icon}</a>`
-          : html;
-      }, '');
+      const iconsHtml = org.links
+        .filter(l => ICONS[l.label] && l.url)
+        .map(l => `<a href="${l.url}" class="org-icon" ${EXT_LINK} title="${l.label}">${ICONS[l.label]}</a>`)
+        .join('');
       return `<li class="org-item">
-        ${nameHtml}
-        <span class="org-sep">—</span>
-        <span class="org-affil">${org.affiliation}</span>
+        <div class="org-info">
+          ${nameHtml}
+          <span class="org-affil">${org.affiliation}</span>
+        </div>
         ${iconsHtml ? `<span class="org-icons">${iconsHtml}</span>` : ''}
       </li>`;
     }).join('');
