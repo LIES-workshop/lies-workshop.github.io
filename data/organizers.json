@@ -39,6 +39,15 @@
         { "label": "Bluesky", "url": "https://bsky.app/profile/frapierri.bsky.social" },
         { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=b17WlbMAAAAJ" }
       ]
+    },
+    {
+      "name": "Christopher Barrie",
+      "affiliation": "New York University",
+      "website": "https://www.cjbarrie.com/",
+      "links": [
+        { "label": "Bluesky", "url": "https://bsky.app/profile/cbarrie.bsky.social" },
+        { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=zNU2JxEAAAAJ&hl=en" }
+      ]
     }
   ]
 }
