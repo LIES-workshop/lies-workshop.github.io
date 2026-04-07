@@ -48,6 +48,24 @@
         { "label": "Bluesky", "url": "https://bsky.app/profile/cbarrie.bsky.social" },
         { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=zNU2JxEAAAAJ&hl=en" }
       ]
+    },
+    {
+      "name": "Anikó Hannák",
+      "affiliation": "University of Zurich",
+      "website": "https://www.ifi.uzh.ch/en/scg/people/hannak.html",
+      "links": [
+        { "label": "Bluesky", "url": "https://bsky.app/profile/did:plc:le6paaayykgwbi3mlohws46g" },
+        { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=LBVvsn8AAAAJ&hl=en" }
+      ]
+    },
+    {
+      "name": "Aleksandra Urman",
+      "affiliation": "University of Zurich",
+      "website": "https://aleksandra-urman.ch/",
+      "links": [
+        { "label": "Bluesky", "url": "https://bsky.app/profile/aurman21.bsky.social" },
+        { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=ZMj9C4cAAAAJ&hl=en" }
+      ]
     }
   ]
 }
