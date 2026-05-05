@@ -53,3 +53,22 @@ async function loadOrganizers() {
 }
 
 Promise.all([loadEditions(), loadOrganizers()]).catch(console.error);
+
+const heroSubtitle = document.querySelector('.hero-subtitle');
+if (heroSubtitle && 'IntersectionObserver' in window) {
+  let plays = 0;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        heroSubtitle.classList.remove('is-hopping');
+        void heroSubtitle.offsetWidth;
+        heroSubtitle.classList.add('is-hopping');
+        plays++;
+        if (plays >= 2) observer.disconnect();
+      } else {
+        heroSubtitle.classList.remove('is-hopping');
+      }
+    });
+  }, { threshold: 0.6 });
+  observer.observe(heroSubtitle);
+}
